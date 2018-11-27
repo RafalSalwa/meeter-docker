@@ -37,25 +37,6 @@ RUN apt update && \
     nginx \
     bash-completion \
     mysql-client \
-    \
-    # Old tools \
-    php5.6 \
-    php5.6-bcmath \
-    php5.6-cli \
-    php5.6-common \
-    php5.6-curl \
-    php5.6-fpm \
-    php5.6-gd \
-    php5.6-json \
-    php5.6-mbstring \
-    php5.6-mcrypt \
-    php5.6-mysql \
-    php5.6-opcache \
-    php5.6-readline \
-    php5.6-soap \
-    php5.6-xml \
-    php5.6-zip \
-    \
     && \
     # install nodejs
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \

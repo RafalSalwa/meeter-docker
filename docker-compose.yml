@@ -4,14 +4,12 @@ services:
     limango:
         build: ./image
         image: limango
+        restart: always
         volumes:
           - ./www:/var/www
           - ./config/nginx:/etc/nginx/sites-enabled
           - ./config/ssl:/etc/nginx/ssl
-          - ./config/php56.ini:/etc/php/5.6/mods-available/zz_limango.ini # files are read in alphabetical order
-          - ./config/php72.ini:/etc/php/7.2/mods-available/zz_limango.ini # files are read in alphabetical order
           - ./config/supervisor.conf:/etc/supervisor/conf.d/main.conf
-        restart: always
         links:
           - redis
           - db
